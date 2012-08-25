@@ -1,0 +1,10 @@
+@mixin inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+div.page {
+  width: 100%;
+  height: 100%;
+}

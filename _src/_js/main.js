@@ -1,0 +1,10 @@
+//var urls = [
+//'http://farm7.static.flickr.com/6089/6059010802_436cefa521_z.jpg',
+//'http://farm7.static.flickr.com/6088/6065742147_3d62b32deb_z.jpg',
+//'http://farm7.static.flickr.com/6197/6065590914_ab1acccf87_z.jpg',
+//'http://farm7.static.flickr.com/6081/6066708246_e1d9a812ed.jpg',
+//'http://farm7.static.flickr.com/6066/6063442584_feb03a88d8.jpg'
+//];
+//window.App = new AppView
+//window.App.render()
+//
