@@ -8,3 +8,7 @@
 //window.App = new AppView
 //window.App.render()
 //
+
+$(document).ready(function () {
+  $.localScroll();
+});

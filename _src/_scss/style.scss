@@ -2,8 +2,14 @@
 
 body {
   background: #EFEFEF;
+  font-family: Cagliostro, sans-serif; 
 }
 
 .foo {
   @include inline-block;
+}
+
+div.page {
+  height: 1200px;
+  width: 100%;
 }

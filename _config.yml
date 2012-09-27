@@ -20,3 +20,5 @@ js:
         - lib/jquery.min.js
         - lib/underscore-min.js
         - lib/backbone-min.js
+        - lib/jquery.localscroll-1.2.7-min.js
+        - lib/jquery.scrollTo-1.4.3.1-min.js
