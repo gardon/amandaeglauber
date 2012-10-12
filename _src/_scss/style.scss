@@ -2,7 +2,14 @@
 
 body {
   background: #EFEFEF;
-  font-family: Cagliostro, sans-serif; 
+  font-family: Handlee, cursive; 
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+#main-wrapper {
+  margin-top: 50px;
 }
 
 .foo {
@@ -10,6 +17,94 @@ body {
 }
 
 div.page {
-  height: 1200px;
+  height: 600px;
   width: 100%;
+  position: relative;
+}
+
+.page-transition {
+  height: 200px;
+  width: 100%;
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  padding: 0 auto;
+  height: 50px;
+  width: 100%;
+  float: left;
+}
+
+.menu {
+  float: right;
+  text-align: center;
+  right: 50%;
+  position: relative;
+  padding: 10px 0 5px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: block;
+  margin-right: 30px;
+  float: left;
+  left: 50%;
+  position: relative;
+  font-size: 20px;
+}
+
+.menu ul li a:visited,
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu ul li a.active,
+.menu ul li a:hover {
+  color: #AA3;
+}
+
+.page-index h1 {
+  display: block;
+  text-indent: -9999px;
+  background: url(/images/amandaefranz.png) no-repeat 0 0 transparent;
+  width: 400px;
+  height: 296px;
+  position: absolute;
+  top: 50%;
+  margin-top: -148px;
+  right: 60%;
+}
+
+.page-index .text {
+  display: block;
+  font-size: 26px;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  margin-top: -87px;
+  text-align: right;
+}
+
+.page-index .ilus {
+  background: url(/images/front-bg.png) no-repeat 0 0 transparent;
+  position: absolute;
+  width: 509px;
+  height: 174px;
+  bottom: 5%;
+  right: 0;
+}
+
+.page-nossa-historia .text {
+  width: 500px;
+  position: absolute;
+  left: 30%;
+  margin-left: -250px;
+  top: 10%
 }

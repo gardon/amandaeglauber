@@ -10,5 +10,25 @@
 //
 
 $(document).ready(function () {
-  $.localScroll();
+  $.localScroll({'offset': -50, 'margin': false});
+  $(".page").each(function() {
+    var height = Math.max(600,window.innerHeight - 50);
+    $(this).height(height);
+  });
+  $(".menu a").each(function() {
+    var target = $(this).attr('href');
+    var element = $('a[name=' + target.replace('#', '') + ']');
+    $(this).data('target_height', element.parent()[0].offsetTop);
+  });
+  $(window).scroll(function(e) {
+    var scroll = $(document).scrollTop();
+    $(".menu a").each(function() {
+      if ($(this).data('target_height') - 100 <= scroll && $(this).data('target_height') + 600 >= scroll) {
+        $(this).addClass('active');
+      }
+      else {
+        $(this).removeClass('active');
+      }
+    });
+  });
 });
