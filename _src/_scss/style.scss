@@ -34,6 +34,18 @@ div.page {
   height: 50px;
   width: 100%;
   float: left;
+  background: url(../images/menu_top.png) repeat-x 0 0 transparent;
+  z-index: 1000;
+}
+
+.menu-wrapper-bottom {
+  position: fixed;
+  top: 50px;
+  height: 106px;
+  width: 100%;
+  float: left;
+  background: url(../images/menu_top.png) repeat-x 0 -50px transparent;
+  z-index: -10;
 }
 
 .menu {
@@ -56,7 +68,7 @@ div.page {
   float: left;
   left: 50%;
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .menu ul li a:visited,
@@ -82,7 +94,7 @@ div.page {
   right: 60%;
 }
 
-.page-index .text {
+.page-nossa-historia .text-side {
   display: block;
   font-size: 26px;
   position: absolute;
@@ -92,7 +104,7 @@ div.page {
   text-align: right;
 }
 
-.page-index .ilus {
+.page-nossa-historia .ilus {
   background: url(/images/front-bg.png) no-repeat 0 0 transparent;
   position: absolute;
   width: 509px;
