@@ -11,6 +11,7 @@
 
 $(document).ready(function () {
   $.localScroll({'offset': -50, 'margin': false});
+  var url = window.location.href.replace(/#.*/, '');
   $(".page").each(function() {
     var height = Math.max(600,window.innerHeight - 50);
     $(this).height(height);

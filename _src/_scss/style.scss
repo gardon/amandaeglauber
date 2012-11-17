@@ -31,10 +31,10 @@ div.page {
   position: fixed;
   top: 0;
   padding: 0 auto;
-  height: 50px;
+  height: 100px;
   width: 100%;
   float: left;
-  background: url(../images/menu_top.png) repeat-x 0 0 transparent;
+  background: url(../images/menu_top.png) repeat-x 0 -47px transparent;
   z-index: 1000;
   font-family: 'Averia Gruesa Libre', cursive;
 }
@@ -45,7 +45,7 @@ div.page {
   height: 106px;
   width: 100%;
   float: left;
-  background: url(../images/menu_top.png) repeat-x 0 -50px transparent;
+  background: url(../images/menu_top.png) repeat-x 0 -49px transparent;
   z-index: -10;
 }
 
@@ -81,6 +81,34 @@ div.page {
 
 .menu ul li a.active,
 .menu ul li a:hover {
+  color: #AA3;
+}
+
+#recado-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+#recado-link a, 
+#recado-link a:visited {
+  color: #000;
+  text-shadow: -1px 0 2px #FFF, 0 1px 2px #FFF, 1px 0 2px #FFF, 0 -1px 2px #FFF;
+}
+
+#recado-link a:hover, 
+#recado-link a.active {
+  color: #AA3;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #AA9;
+}
+
+a.active,
+a:hover {
   color: #AA3;
 }
 
@@ -120,5 +148,24 @@ div.page {
   position: absolute;
   left: 30%;
   margin-left: -250px;
-  top: 10%
+  top: 10%;
+}
+
+#disqus_thread {
+  font-family: Averia Gruesa Libre;
+  font-weight: normal;
+  margin: 0 10%;
+  color: #777;
+}
+
+.dsq-avatar, .dsq-brlink, #dsq-subscribe {
+  display: none;
+}
+
+#dsq-reply .dsq-textarea-reply {
+  margin-left: 0;
+}
+
+.dsq-comment .dsq-comment-body {
+  padding: 0;
 }
