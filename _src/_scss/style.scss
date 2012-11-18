@@ -175,13 +175,28 @@ a:hover {
   bottom: 0;
   z-index: 100;
   width: 250px;
-  right: 50%;
-  margin-right: -125px;
+  left: 50%;
 }
-#presentes-wrapper a {
-  display: block;
+#presentes-wrapper #presentes {
+  width: 370px;
+  margin-left: -185px;
+} 
+#presentes-wrapper a.presentes-link {
+  overflow: hidden;
   text-indent: -9999px;
-  background: url(/images/presentes.png) no-repeat 0 0 transparent;
+  display: block;
   width: 250px;
   height: 70px;
-} 
+  background: url(/images/presentes.png) no-repeat 0 0 transparent;
+  margin-left: 60px;
+}
+#presentes-wrapper .obs {
+  background-color: #FFF;
+  display: none;
+  padding: 0 10px 0;
+}
+#presentes-wrapper .obs ul {
+  margin: 0;
+  padding: 1em 0;
+  list-style-position: inside;
+}

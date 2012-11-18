@@ -32,4 +32,18 @@ $(document).ready(function () {
       }
     });
   });
+  $('.presentes-link').click(function(e) {
+    var obs = $("#presentes .obs");
+    if (!$(obs).hasClass('hidden')) {
+      $(obs).addClass('hidden').slideUp();
+    }
+    else {
+      $(obs).removeClass('hidden').slideDown().parent().mouseleave(function(e) {
+        $('.obs', this).delay(800).addClass('hidden').slideUp();
+      }).mouseenter(function(e) {
+        $('.obs', this).clearQueue();
+      });
+    }
+    return false;
+  });
 });
