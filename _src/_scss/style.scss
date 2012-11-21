@@ -20,11 +20,24 @@ div.page {
   height: 600px;
   width: 100%;
   position: relative;
+  padding-top: 10px;
+  overflow-x:hidden;
 }
 
 .page-transition {
   height: 200px;
   width: 100%;
+}
+
+.top-link {
+  display: none;
+}
+
+.mobile .top-link {
+  display: block;
+  position: absolute;
+  left: 10%;
+  z-index: 100;
 }
 
 .menu-wrapper {
@@ -37,6 +50,11 @@ div.page {
   background: url(../images/menu_top.png) repeat-x 0 -47px transparent;
   z-index: 1000;
   font-family: 'Averia Gruesa Libre', cursive;
+}
+
+.mobile .menu-wrapper {
+  position: absolute;
+  float: left;
 }
 
 .menu-wrapper-bottom {
@@ -57,6 +75,16 @@ div.page {
   padding: 10px 0 5px;
 }
 
+.netbook .menu {
+  float: none;
+  right: auto;
+  margin: 0 150px 0 20px;
+}
+
+.mobile .menu {
+  margin: 0 20px;
+}
+
 .menu ul {
   list-style-type: none;
   margin: 0;
@@ -70,6 +98,14 @@ div.page {
   left: 50%;
   position: relative;
   font-size: 24px;
+}
+
+.netbook .menu ul li {
+  left: auto;
+}
+
+.mobile .menu ul li {
+  font-size: 16px;
 }
 
 .menu ul li a:visited,
@@ -89,6 +125,14 @@ div.page {
   top: 0;
   right: 0;
   margin: 10px;
+}
+
+.mobile #recado-link {
+  position: static;
+  float: left;
+  right: auto;
+  top: auto;
+  margin: 0 20px;
 }
 
 #recado-link a, 
@@ -121,17 +165,66 @@ a:hover {
   position: absolute;
   top: 50%;
   margin-top: -148px;
-  right: 60%;
+  margin-right: -200px; 
+  right: 73%;
+  z-index: 1;
+}
+
+.mobile .page-index h1 {
+  left: 50%;
+  margin: 0 0 0 -200px;
+  position: relative;
+  right: auto;
+  top: 10px;
+}
+
+.page-index #welcome-image {
+  margin-top: -362px;
+  margin-left: -290px;
+  position: absolute;
+  left: 73%;
+  top: 50%;
+}
+
+.netbook .page-index #welcome-image {
+  height: 357px;
+  margin-left: -145px;
+  margin-top: -181px;
+}
+
+.mobile .page-index #welcome-image {
+  left: 50%;
+  margin-top: 0;
+  top: 306px;
 }
 
 .page-nossa-historia .text-side {
   display: block;
   font-size: 26px;
   position: absolute;
-  right: 20%;
-  top: 50%;
-  margin-top: -87px;
+  right: 30%;
+  top: 10%;
+  margin-top: 10px;
+  margin-right: -250px;
   text-align: right;
+}
+
+.netbook .page-nossa-historia .text-side {
+  top: 5%;
+}
+
+.tablet .page-nossa-historia .text-side {
+  float: left;
+  font-size: 20px;
+  left: 0;
+  padding-left: 10%;
+  position: relative;
+  text-align: left;
+  top: 0;
+}
+
+.mobile .page-nossa-historia .text-side {
+  float: none;
 }
 
 .page-nossa-historia .ilus {
@@ -143,12 +236,45 @@ a:hover {
   right: 0;
 }
 
+.tablet .page-nossa-historia .ilus {
+  bottom: auto;
+}
+
 .page-nossa-historia .text {
   width: 500px;
   position: absolute;
   left: 30%;
   margin-left: -250px;
   top: 10%;
+}
+
+.netbook .page-nossa-historia .text {
+  top: 5%;
+}
+
+.tablet .page-nossa-historia .text {
+  position: relative;
+  width: 80%;
+  padding: 0 10%;
+  margin: 30px 0;
+  left: 0;
+  top: 0;
+}
+
+.page-hospedagem .text {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.tablet .page-hospedagem .text {
+  width: 80%;
+  position: relative;
+  padding: 0 10%;
+  margin: 30px 0;
+}
+
+.page-hospedagem .saloes {
+  text-align: right;
 }
 
 #disqus_thread {
