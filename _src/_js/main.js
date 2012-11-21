@@ -12,6 +12,13 @@
 $(document).ready(function () {
   var url = window.location.href.replace(/#.*/, '');
   HandleResize();
+  if (window.innerWidth > 500) {
+    var offset = -50;
+  }
+  else {
+    var offset = -20;
+  }
+  $.localScroll({'offset': offset, 'margin': false, 'hash': true});
   $(window).resize(HandleResize);
   $(".menu a").each(function() {
     var target = $(this).attr('href');
@@ -46,10 +53,10 @@ $(document).ready(function () {
   function HandleResize() {
     var wwidth = window.innerWidth;
     var defheight = 600;
-    var offset = -50;
     $('body').removeClass('netbook');
     $('body').removeClass('tablet');
     $('body').removeClass('mobile');
+    $('body').removeClass('mobile-small');
     if (wwidth > 1024) {
     }
     if (wwidth <= 1024) {
@@ -65,10 +72,13 @@ $(document).ready(function () {
       defheight = 500;
       offset = -20;
     }
+    if (wwidth < 480) {
+      $('body').addClass('mobile-small');
+    }
     $(".page").each(function() {
-      var height = Math.max(defheight,window.innerHeight - 50);
+      $(this).css('height', 'auto');
+      var height = Math.max(defheight,window.innerHeight - 50,$(this).height());
       $(this).height(height);
     });
-    $.localScroll({'offset': offset, 'margin': false, 'hash': true});
   }
 });

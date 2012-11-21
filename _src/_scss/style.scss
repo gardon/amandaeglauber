@@ -8,8 +8,20 @@ body {
   background-color: #FFFFFF;
 }
 
+h2 {
+  font-size: 24px;
+}
+
+.mobile h2 {
+  font-size: 20px;
+}
+
 #main-wrapper {
   margin-top: 50px;
+}
+
+.mobile-small #main-wrapper {
+  margin-top: 70px;
 }
 
 .foo {
@@ -17,11 +29,11 @@ body {
 }
 
 div.page {
-  height: 600px;
+  //height: 600px;
   width: 100%;
   position: relative;
   padding-top: 10px;
-  overflow-x:hidden;
+  height: auto;
 }
 
 .page-transition {
@@ -55,6 +67,9 @@ div.page {
 .mobile .menu-wrapper {
   position: absolute;
   float: left;
+}
+.mobile-small .menu-wrapper {
+  position: relative;
 }
 
 .menu-wrapper-bottom {
@@ -148,12 +163,12 @@ div.page {
 
 a, a:visited {
   text-decoration: none;
-  color: #AA9;
+  color: #997;
 }
 
 a.active,
 a:hover {
-  color: #AA3;
+  color: #993;
 }
 
 .page-index h1 {
@@ -178,6 +193,13 @@ a:hover {
   top: 10px;
 }
 
+.mobile-small .page-index h1 {
+  background: url(/images/amandaefranz-small.png) no-repeat 0 0 transparent;
+  margin: 0 0 0 -100px;
+  width: 200px;
+  height: 148px;
+}
+
 .page-index #welcome-image {
   margin-top: -362px;
   margin-left: -290px;
@@ -196,6 +218,9 @@ a:hover {
   left: 50%;
   margin-top: 0;
   top: 306px;
+}
+.mobile-small .page-index #welcome-image {
+  top: 158px;
 }
 
 .page-nossa-historia .text-side {
@@ -221,6 +246,7 @@ a:hover {
   position: relative;
   text-align: left;
   top: 0;
+  margin: 0;
 }
 
 .mobile .page-nossa-historia .text-side {
@@ -238,6 +264,12 @@ a:hover {
 
 .tablet .page-nossa-historia .ilus {
   bottom: auto;
+}
+
+.mobile .page-nossa-historia .ilus {
+  background: url(/images/front-bg-small.png) no-repeat 0 0 transparent;
+  width: 255px;
+  height: 87px;
 }
 
 .page-nossa-historia .text {
@@ -261,20 +293,18 @@ a:hover {
   top: 0;
 }
 
+.page-vestir .text,
 .page-hospedagem .text {
   width: 800px;
   margin: 0 auto;
 }
 
+.tablet .page-vestir .text,
 .tablet .page-hospedagem .text {
   width: 80%;
   position: relative;
   padding: 0 10%;
   margin: 30px 0;
-}
-
-.page-hospedagem .saloes {
-  text-align: right;
 }
 
 #disqus_thread {
@@ -303,10 +333,20 @@ a:hover {
   width: 250px;
   left: 50%;
 }
+.mobile-small #presentes-wrapper {
+  position: relative;
+  left: 0;
+  bottom: auto;
+  width: auto;
+}
 #presentes-wrapper #presentes {
   width: 370px;
   margin-left: -185px;
 } 
+.mobile-small #presentes-wrapper #presentes {
+  width: auto;
+  margin: 0;
+}
 #presentes-wrapper a.presentes-link {
   overflow: hidden;
   text-indent: -9999px;
@@ -315,6 +355,12 @@ a:hover {
   height: 70px;
   background: url(/images/presentes.png) no-repeat 0 0 transparent;
   margin-left: 60px;
+}
+.mobile-small #presentes-wrapper a.presentes-link {
+  background: url(/images/presentes-small.png) no-repeat 0 0 transparent;
+  width: 125px;
+  height: 35px;
+  margin-left: 20px;
 }
 #presentes-wrapper .obs {
   background-color: #FFF;
