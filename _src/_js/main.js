@@ -10,6 +10,18 @@
 //
 
 $(document).ready(function () {
+  var now = new Date();
+  var target = new Date("Jan 5 2013 16:00");
+  var days = (target - now) / 1000 / 60 / 60 / 24;
+  var daysRound = Math.floor(days);
+  if (daysRound > 0) {
+    $('.missing').html(' - faltam ' + daysRound + ' dias!');
+  }
+  else {
+    $('.missing').html(' - já se passaram ' + daysRound + ' dias!');
+  }
+
+  
   var url = window.location.href.replace(/#.*/, '');
   HandleResize();
   if (window.innerWidth > 500) {
@@ -81,4 +93,8 @@ $(document).ready(function () {
       $(this).height(height);
     });
   }
+  var gallery = $('body:not(.mobile) #thumbs').galleriffic({
+    imageContainerSel: '#slideshow',
+    numThumbs: 40
+  });
 });

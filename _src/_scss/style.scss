@@ -1,5 +1,26 @@
 @import 'mixin';
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
 body {
   background: #EFEFEF;
   font-family: Handlee, cursive; 
@@ -171,6 +192,11 @@ a:hover {
   color: #993;
 }
 
+.page-index .date {
+  margin: 10px 10px 0;
+  text-align: center;
+}
+
 .page-index h1 {
   display: block;
   text-indent: -9999px;
@@ -215,12 +241,14 @@ a:hover {
 }
 
 .mobile .page-index #welcome-image {
+  position: relative;
   left: 50%;
   margin-top: 0;
-  top: 306px;
+  top: 0;
 }
 .mobile-small .page-index #welcome-image {
-  top: 158px;
+  height: 178px;
+  margin-left: -72px;
 }
 
 .page-nossa-historia .text-side {
@@ -293,12 +321,95 @@ a:hover {
   top: 0;
 }
 
+.page-fotos .thumbs {
+  display: block;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0 0 0 5%;
+  width: 35%;
+}
+
+.netbook .page-fotos .thumbs {
+  display: none;
+}
+
+.mobile .page-fotos .thumbs {
+  display: block;
+  float: none;
+  width: 90%;
+  padding: 0 5% 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-fotos .thumbs li{
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.page-fotos .thumbs li img {
+  display: block;
+}
+
+.page-fotos #slideshow {
+  width: 55%;
+  float: left;
+  padding: 0 5% 0 0;
+  text-align: center;
+}
+
+.netbook .page-fotos #slideshow {
+  float: none;
+  width: 90%;
+  padding: 0 5% 0;
+}
+
+.tablet .page-fotos #slideshow img {
+  width: 50%;
+  height: 50%;
+}
+
+.mobile .page-fotos #slideshow {
+  display: none;
+}
+
+.page-local #map {
+  background: url(/images/mapa.png) no-repeat 0 0 transparent;
+  display: block;
+  width: 700px;
+  height: 720px;
+  margin-left: 50px;
+}
+
+.tablet .page-local #map {
+  position: relative;
+  left: 50%;
+  margin-left: -350px;
+}
+
+.mobile .page-local #map {
+  background: url(/images/mapa_med.png) no-repeat 0 0 transparent;
+  width: 350px;
+  height: 360px;
+  margin-left: -175px;
+}
+
+.mobile-small .page-local #map {
+  background: url(/images/mapa_small.png) no-repeat 0 0 transparent;
+  width: 175px;
+  height: 180px;
+  margin-left: -87px;
+}
+
+.page-local .text,
 .page-vestir .text,
 .page-hospedagem .text {
   width: 800px;
   margin: 0 auto;
 }
 
+.tablet .page-local .text,
 .tablet .page-vestir .text,
 .tablet .page-hospedagem .text {
   width: 80%;
