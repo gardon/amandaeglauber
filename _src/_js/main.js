@@ -17,6 +17,11 @@ $(document).ready(function () {
   if (daysRound > 0) {
     $('.missing').html(' - faltam ' + daysRound + ' dias!');
   }
+  else if (daysRound == 0) {
+    var hours = (target - now) / 1000 / 60 / 60;
+    var hoursRound = Math.floor(hours);
+    $('.missing').html(' - faltam ' + hoursRound + ' horas!');
+  }
   else {
     $('.missing').html(' - já se passaram ' + daysRound + ' dias!');
   }
