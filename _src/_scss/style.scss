@@ -195,6 +195,7 @@ a:hover {
 .page-index .date {
   margin: 10px 10px 0;
   text-align: center;
+  z-index: 4;
 }
 
 .page-index h1 {
@@ -232,6 +233,7 @@ a:hover {
   position: absolute;
   left: 73%;
   top: 50%;
+  z-index: -1;
 }
 
 .netbook .page-index #welcome-image {
